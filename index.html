@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>It’s Valentine, My Love 💕</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: #ffd6e8;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 16px;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      width: 100%;
+      max-width: 420px;
+      margin: auto;
+      padding: 30px 20px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 10px auto 20px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 12px auto;
+    }
+
+    img {
+      display: block;
+      width: 80%;
+      max-width: 360px;
+      margin: 24px auto;
+      border-radius: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      background: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .music-pill {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      background: #e6f4ea;
+      color: #1e7e34;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop playsinline>
+    <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+
+    <div id="musicToggle" class="music-pill">🎵 Music</div>
+
+    <h1>It’s Valentine, my love 👀</h1>
+
+    <p>
+      To a fresh journey full of adventure, wildness, awareness —
+      growing inward and outward, and rising toward supreme consciousness…
+    </p>
+
+    <img src="images/journey.jpg" alt="Journey together">
+
+    <button onclick="location.href='page3.html'">Next →</button>
+
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.volume = 0.2;
+        music.play();
+        musicToggle.textContent = "🔊 Playing";
+        musicToggle.style.opacity = "0.6";
+      }
+    });
+  </script>
+
+</body>
+</html>

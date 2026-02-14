@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>One 💞</title>
+  <style>
+    body {
+      background:#ffccd5;
+      font-family:Arial;
+      text-align:center;
+      padding-top:80px;
+    }
+    img {
+      width:80%;
+      max-width:400px;
+      border-radius:25px;
+      margin:30px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Journey to be one from two 💞</h1>
+  <p>Peacefully, Living fully .. Moment to Moment … Hand in Hand ..Together</p>
+
+  <img src="images/together.jpg">
+
+  <h2>love you.. To forever Companionship ❤️</h2>
+<audio id="bg-music" autoplay loop muted>
+  <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  function enableSound() {
+    music.muted = false;
+    music.volume = 0.4;
+    music.play();
+    document.removeEventListener("click", enableSound);
+  }
+
+  document.addEventListener("click", enableSound);
+</script>
+
+</body>
+</html>

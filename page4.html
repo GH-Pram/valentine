@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Think again 🥺</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: #ffccd5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 16px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 20px auto;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 12px auto;
+    }
+
+    img {
+      display: block;
+      width: 80%;
+      max-width: 420px;
+      margin: 30px auto;
+      border-radius: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .music-pill {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      background: #e6f4ea;
+      color: #1e7e34;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop playsinline>
+    <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="musicToggle" class="music-pill">🎵 Music</div>
+
+  <h1>OMGGGGGGGGGGGG My heart just skipped a beat… 🥺</h1>
+
+  <p>
+    I am 1000% in this journey of companionship — in all ways.
+    From breaking beds to the moon,
+    from adventuring through God’s amazing creation,
+    to raising ourselves toward super-consciousness and godliness.
+  </p>
+
+  <p><strong>So… it’s Yesssss 💖</strong></p>
+
+  <img src="images/companions.jpg" alt="Companions">
+
+  <div>
+    <button onclick="location.href='yes.html'">Yes</button>
+    <button onclick="location.href='page5.html'">No</button>
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.volume = 0.2;
+        music.play();
+        musicToggle.textContent = "🔊 Playing";
+        musicToggle.style.opacity = "0.6";
+      }
+    });
+  </script>
+
+</body>
+</html>

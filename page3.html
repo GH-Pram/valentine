@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 💖</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: #ffd6e8;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 16px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 22px;
+      line-height: 1.4;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    img {
+      display: block;
+      width: 80%;
+      max-width: 400px;
+      margin: 30px auto;
+      border-radius: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      margin: 12px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .no {
+      background: #f44336;
+      color: white;
+    }
+
+    .music-pill {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      background: #e6f4ea;
+      color: #1e7e34;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop playsinline>
+    <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="musicToggle" class="music-pill">🎵 Music</div>
+
+  <h1>
+    Will you be my Valentine — or better yet, walk this path of companionship with me?
+    No ifs. No buts. No doubts. No holding back. 💘
+  </h1>
+
+  <img src="images/valentine.jpg" alt="Valentine">
+
+  <div>
+    <button class="yes" onclick="location.href='yes.html'">Yes</button>
+    <button class="no" onclick="location.href='page4.html'">No</button>
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.volume = 0.2;
+        music.play();
+        musicToggle.textContent = "🔊 Playing";
+        musicToggle.style.opacity = "0.6";
+      }
+    });
+  </script>
+
+</body>
+</html>

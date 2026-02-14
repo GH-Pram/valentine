@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Us 💕</title>
+  <style>
+    body { background:#ffe4ef; font-family:Arial; text-align:center; }
+    img { width:120px; border-radius:15px; margin:10px; }
+    button { padding:12px 20px; background:#ff4d88; color:white; border:none; border-radius:10px; font-size:16px; }
+  </style>
+</head>
+
+<body>
+  <h1>Us 💖</h1>
+  <p>Some of my favorite moments</p>
+
+  <img src="images/pic1.jpg">
+  <img src="images/pic2.jpg">
+  <img src="images/pic3.jpg">
+
+  <br><br>
+  <button onclick="location.href='page3.html'">Continue →</button>
+<audio id="bg-music" autoplay loop muted>
+  <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  function enableSound() {
+    music.muted = false;
+    music.volume = 0.4;
+    music.play();
+    document.removeEventListener("click", enableSound);
+  }
+
+  document.addEventListener("click", enableSound);
+</script>
+
+</body>
+</html>
