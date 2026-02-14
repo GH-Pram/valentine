@@ -11,8 +11,11 @@
       background: #ffd6e8;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px 16px;
+      padding: 40px 16px 120px; /* EXTRA bottom space */
       margin: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     h1 {
@@ -28,6 +31,10 @@
       max-width: 400px;
       margin: 30px auto;
       border-radius: 20px;
+    }
+
+    .button-area {
+      margin-top: 30px;
     }
 
     button {
@@ -79,7 +86,7 @@
 
   <img src="images/valentine.jpg" alt="Valentine">
 
-  <div>
+  <div class="button-area">
     <button class="yes" onclick="location.href='yes.html'">Yes</button>
     <button class="no" onclick="location.href='page4.html'">No</button>
   </div>
