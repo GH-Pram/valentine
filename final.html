@@ -1,46 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>One 💞</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      background:#ffccd5;
-      font-family:Arial;
-      text-align:center;
-      padding-top:80px;
+      background: #ffccd5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 16px 120px;
+      margin: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
+
+    h1 {
+      font-size: 28px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 12px auto;
+    }
+
     img {
-      width:80%;
-      max-width:400px;
-      border-radius:25px;
-      margin:30px 0;
+      display: block;
+      width: 80%;
+      max-width: 400px;
+      margin: 30px auto;
+      border-radius: 25px;
+    }
+
+    .music-pill {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      border-radius: 20px;
+      background: #fff0f3;
+      color: #b00020;
+      cursor: pointer;
+      user-select: none;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop playsinline>
+    <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="musicToggle" class="music-pill">🎵 Music</div>
+
   <h1>Journey to be one from two 💞</h1>
-  <p>Peacefully, Living fully .. Moment to Moment … Hand in Hand ..Together</p>
 
-  <img src="images/together.jpg">
+  <p>
+    Peacefully living fully — moment to moment.  
+    Hand in hand… together.
+  </p>
 
-  <h2>love you.. To forever Companionship ❤️</h2>
-<audio id="bg-music" autoplay loop muted>
-  <source src="images/you-and-i-hawaii.mp3" type="audio/mpeg">
-</audio>
+  <img src="images/together.jpg" alt="Together">
 
-<script>
-  const music = document.getElementById("bg-music");
+  <h2>Love you… to forever companionship ❤️</h2>
 
-  function enableSound() {
-    music.muted = false;
-    music.volume = 0.4;
-    music.play();
-    document.removeEventListener("click", enableSound);
-  }
+  <script>
+    const music = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
 
-  document.addEventListener("click", enableSound);
-</script>
+    musicToggle.addEventListener("click", () => {
+      if (music.paused) {
+        music.volume = 0.2;
+        music.play();
+        musicToggle.textContent = "🔊 Playing";
+        musicToggle.style.opacity = "0.6";
+      }
+    });
+  </script>
 
 </body>
 </html>
