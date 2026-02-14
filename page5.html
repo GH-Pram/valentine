@@ -11,9 +11,11 @@
       background: #ffd6e8;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 24px 16px 80px;
+      padding: 24px 16px 140px; /* extra bottom space */
       margin: 0;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     /* Music pill */
@@ -45,6 +47,12 @@
       border-radius: 20px;
       margin: 24px auto;
       display: block;
+    }
+
+    .button-area {
+      position: relative;
+      height: 120px; /* keeps buttons visible */
+      margin-top: 20px;
     }
 
     button {
@@ -84,7 +92,7 @@
 
   <img src="images/run.jpg" alt="Running away">
 
-  <div>
+  <div class="button-area">
     <button class="yes" onclick="location.href='yes.html'">Yes 😍</button>
     <button id="no" onmouseover="moveNo()">No 😏</button>
   </div>
@@ -92,8 +100,8 @@
   <script>
     function moveNo() {
       const noBtn = document.getElementById("no");
-      const x = Math.random() * (window.innerWidth - 120);
-      const y = Math.random() * (window.innerHeight - 80);
+      const x = Math.random() * (window.innerWidth - 140);
+      const y = Math.random() * (window.innerHeight - 140);
       noBtn.style.left = x + "px";
       noBtn.style.top = y + "px";
     }
