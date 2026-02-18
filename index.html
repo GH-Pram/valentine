@@ -65,6 +65,17 @@
       cursor: pointer;
       user-select: none;
     }
+
+  .hero-video {
+    display: block;
+    width: 85%;
+    max-width: 420px;
+    margin: 30px auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+    
   </style>
 </head>
 
@@ -86,7 +97,9 @@
       growing inward and outward, and rising toward supreme consciousness…
     </p>
 
-    <img src="images/journey.jpg" alt="Journey together">
+   <video class="hero-video" autoplay muted loop playsinline>
+  <source src="images/intro.mp4" type="video/mp4">
+  </video>
 
     <button onclick="location.href='page3.html'">Next →</button>
 
