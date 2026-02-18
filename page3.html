@@ -67,6 +67,15 @@
       cursor: pointer;
       user-select: none;
     }
+
+    .hero-video {
+    display: block;
+    width: 85%;
+    max-width: 420px;
+    margin: 30px auto;
+    border-radius: 20px;
+    object-fit: cover;
+  }
   </style>
 </head>
 
@@ -80,11 +89,13 @@
   <div id="musicToggle" class="music-pill">🎵 Music</div>
 
   <h1>
-    Will you be my Valentine — or better yet, walk this path of companionship with me?
+    Will you be my Valentine — or in my words, lets walk walk this path of companionship together?
     No ifs. No buts. No doubts. No holding back. 💘
   </h1>
 
-  <img src="images/valentine.jpg" alt="Valentine">
+<video class="hero-video" autoplay muted loop playsinline>
+  <source src="images/intro.mp4" type="video/mp4">
+</video>
 
   <div class="button-area">
     <button class="yes" onclick="location.href='yes.html'">Yes</button>
